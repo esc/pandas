@@ -713,7 +713,6 @@ class TestAlignment(object):
         with assert_produces_warning(False):
             pd.eval('df + s', engine=engine, parser=parser)
 
-    @slow
     def test_performance_warning_for_asenine_alignment(self):
         for engine, parser in ENGINES_PARSERS:
             yield self.check_performance_warning_for_asenine_alignment, engine, parser
